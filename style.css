@@ -1,0 +1,521 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500;1,600;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&display=swap");
+* {
+  
+  font-family: "Playfair Display", serif;
+  /* font-family: "Roboto", sans-serif; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: 1.5s linear;
+  text-transform: capitalize;
+  
+}
+body{
+    background-color: rgba(200, 187, 162, 0.454);
+}
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+}
+/* ...........menubar......... */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background-color: rgba(76, 41, 1, 0.683);
+  padding: .5rem 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-align: center;
+}
+.herz{
+    font-size: 3rem;
+}
+header .navbar a {
+  color: white;
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+header .navbar a:hover {
+  color: black;
+}
+#menu-bar {
+  font-size: 3rem;
+  color: white;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+section{
+  padding: 3rem 9%; 
+}
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(./images/R.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.home .content span {
+  font-size: 5rem;
+  font-weight: bolder;
+  color: rgb(250, 235, 61);
+  text-shadow: .5px 5px 10px rgba(1, 1, 1, 0.507);
+ 
+  /* background-color: rgba(33, 16, 16, 0.256); */
+}
+
+.home .content h3 {
+  font-size: 7rem;
+  /* font-weight: bolder; */
+  color: rgb(113, 78, 5);
+  text-shadow: .5px 10px rgba(255, 255, 255, 0.507);
+  /* background-color: rgba(33, 16, 16, 0.256); */
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border: .2rem solid  rgb(113, 78, 5);;
+    color: rgb(113, 78, 5);
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.66);
+    padding: 1rem;
+    border-radius:1rem ;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 700;
+    
+}
+.btn:hover{
+    background-color: rgb(165, 89, 42);
+    color: white;
+    border: white;
+}
+.step-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.step-container .step{
+    background-color: white;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(192, 115, 0);
+    text-align: center;
+    flex: 1 1 30rem;
+}
+.step-container .step span{
+    font-size: 6rem;
+    font-weight: bolder;
+    color: rgb(188, 94, 0);
+}
+.step-container .step h3{
+    font-size: 3rem;
+   
+    color: rgb(188, 94, 0);
+}
+.step-container .step p{
+    font-size: 1.5rem;
+   font-weight: bolder;
+    color: rgb(188, 94, 0);
+}
+.heading{
+    text-align: center;
+    padding-bottom: 2rem;
+ 
+}
+.heading h1{
+font-size: 4rem;
+color: rgb(188, 94, 0);
+text-transform: uppercase;
+text-transform: uppercase;
+
+}
+/* ...........verkäufer........... */
+.verkäufer .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.verkäufer .box-container .box{
+   flex: 1 1 39rem;
+   margin: 1rem;
+   overflow: hidden;
+   position: relative;
+   border-radius: 5rem;
+   box-shadow: 0 0 10px rgb(192, 115, 0);
+   height:40rem;
+   
+}
+.verkäufer .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit:center;
+    
+}
+.verkäufer .box-container .box .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(246, 228, 167, 0.717);
+    transform: scale(1);
+    opacity: 0;
+    cursor: pointer;
+}
+.verkäufer .box-container .box:hover .info{
+opacity: 1;
+transform: scale(1.1);
+transition: all 100ms;
+}
+.verkäufer .box-container .box:hover img{
+transform: scale(1.3);
+transition: all 100ms;
+}
+
+.verkäufer .box-container .box .info h3{
+    font-size: 3rem;
+    color: rgb(141, 71, 1);
+}
+/* .........kunden  slider images........ */
+.slider{
+  position: relative;
+  max-width: 80%;
+  min-height: 500px;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 5rem;
+  background-color: rgba(246, 228, 167, 0.717);
+  margin: auto;
+}
+.slider .slide{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* -webkit-clip-path: circle(0.3% at 0 45%); */
+clip-path: circle(0.3% at 0 45%);
+
+}
+.slider .slide.active{
+  /* -webkit-clip-path: circle(114.5% at 0 45%); */
+  clip-path: circle(150.0% at 0 45%);
+  transition: 2s;
+}
+.slider .slide img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:center ;
+}
+.slider .slide .info{
+  position: absolute;
+ max-width: 600px;
+  bottom: 4rem;
+  left: 5rem;
+  right: 0;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: rgb(226, 132, 0);
+}
+.slider .slide .info h3{
+  font-size: 4rem;
+}
+.navigation{
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+}
+.slider:hover .navigation{
+  opacity: 1;
+}
+.navigation-visibility{
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+.navigation-visibility .slide-icon{
+  z-index: 1000;
+  background-color: rgba(56, 5, 5, 0.342);
+  width: 20px;
+  height: 10px;
+  transform: translateY(-50px);
+  margin: 0 6px;
+ 
+}
+.navigation-visibility .slide-icon.active{
+  background-color: rgb(93, 60, 0);
+  
+}
+.prev-btn, .next-btn{
+  z-index: 1000;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: rgb(62, 26, 4);
+  padding: 5rem;
+  cursor: pointer;
+}
+
+.kunden .row .box img{
+  height: 30rem;
+  object-fit:cover ;
+  width: 100%;
+  border-radius: 5rem;
+  border: 5px solid rgba(222, 184, 135, 0.388);
+  box-shadow:0 0 10px rgb(255, 217, 0) ;
+  
+}
+/* ..........team............ */
+.team .container-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.team .container-box .box{
+  margin: 1rem;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem rgba(65, 40, 1, 0.397);
+  background-color: rgb(255, 191, 95);
+  padding: 4.5rem 2rem;
+  text-align: center;
+  width: 100px;
+  flex:1 1 30rem;
+}
+.team .container-box .box img{
+  width: 15rem;
+  height: 15rem;
+  object-fit:cover ;
+  border-radius: 50%;
+}
+.team .container-box .box h3{
+  font-size:2rem ;
+  color:rgb(99, 11, 11) ;
+}
+.team .container-box .box span{
+  font-size:2rem ;
+  color:brown ;
+}
+.team .container-box .box .share{
+  padding: 1rem 0;
+}
+.team .container-box .box .share a{
+  height: 4rem;
+  width: 4rem;
+  background-color: rgba(255, 255, 255, 0.199);
+  line-height:4rem ;
+  color: black;
+}
+.team .container-box .box .share a:hover{
+  background-color: brown;
+  color: white;
+  transition: 110ms;
+}
+/* .........kontakt......... */
+.kontakt form{
+padding: 2rem;
+background-color: white;
+border-radius:.5rem ;
+box-shadow: 0 .5rem 1rem rgba(65, 40, 1, 0.397);
+text-align: center;
+}
+.kontakt form .input-box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+.kontakt form .input-box input, .kontakt form textarea{
+border: .2rem solid rgba(165, 42, 42, 0.281);
+font-size: 1.7rem;
+padding:1.5rem ;
+margin: 1rem 0;
+text-transform:none ;
+color: black;
+}
+.kontakt form .input-box input{
+  width: 49%;
+}
+.kontakt form textarea{
+  width: 100%;
+  height: 15rem;
+  resize: none;
+}
+.kontakt form .input-box input::placeholder,
+ .kontakt form textarea::placeholder{
+  text-transform: capitalize;
+ }
+.kontakt form .input-box input:focus,
+ .kontakt form textarea:focus{
+  transition: 100ms;
+  border:2px solid  rgba(255, 2, 2, 0.427) ;
+ }
+
+ /* ......bloggen...... */
+
+ .bloggen .box-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ flex-wrap: wrap;
+
+ }
+ .bloggen .box-container .box{
+  background-color: white;
+  margin: 1rem;
+  border-radius: .5rem;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.526);
+  overflow: hidden;
+  flex: 1 1 30rem;
+ }
+ .bloggen .box-container .box img{
+  width: 100%;
+  height:25rem ;
+  object-fit:cover ;
+ }
+ .bloggen .box-container .box .info{
+  padding: 2rem;
+ }
+ .bloggen .box-container .box .info h3{
+  color: rgb(54, 0, 0);
+  font-size:2rem ;
+ }
+ .bloggen .box-container .box .info h3 span{
+  color: rgb(133, 2, 2);
+  font-weight: bolder;
+ }
+
+ .footer{
+  background-color: rgba(240, 248, 255, 0.786);
+  color: rgb(218, 109, 0);
+  padding: 2.5rem 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+ }
+ .footer h3 span{
+  color: brown;
+ }
+/* media queries */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 991px) {
+  header {
+    padding: 2rem 4%;
+  }
+  section{
+    padding: 3rem 4%; 
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-bar {
+    display: block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* color: blue; */
+    background-color: rgba(197, 105, 1, 0.683);
+    padding: 2rem;
+    display: none;
+  }
+  header .navbar.nav-toggle {
+    display: block;
+  }
+  header .navbar a {
+    display: block;
+    background-color: white;
+    border-radius: 1rem;
+    color: rgba(103, 56, 2, 0.683);
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 2.2rem;
+  }
+  header .navbar a:hover {
+    background-color: rgb(127, 127, 152);
+  }
+  .home{
+    justify-content: center;
+
+  }
+  .home .content{
+    text-align: center;
+  } 
+  .slider{
+    width: 100%;
+  }
+  .slider .box-container .box .info{
+    position: absolute;
+   max-width: 600px;
+    bottom: 4rem;
+    left: 5rem;
+    right: 0;
+    font-size: 1rem;
+    font-weight: bolder;
+    
+  }
+  .slider .box-container .box .info h3{
+    font-size: 1.7rem;
+  }
+  .kontakt form .input-box input{
+    width: 100%;
+  }
+  
+ .footer{
+ 
+  font-size: 1.5rem;
+ 
+ }
+ .heading h1{
+ 
+ font-size: 2rem;
+
+}
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+   
+ .footer{
+ 
+  font-size: 1rem;
+ 
+ }
+ 
+}
